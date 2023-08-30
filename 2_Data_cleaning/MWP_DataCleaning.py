@@ -33,4 +33,9 @@ def convert_to_float(frac_str):
         return whole - frac if whole < 0 else whole + frac
 
 
-# Convert infix expression to 
+# Convert infix expression to suffix expression
+def postfix_equation(equ_list):
+    stack = []
+    post_equ = []
+    op_list = ['+', '-', '*', '/', '^']
+    priori = {'^': 3, '*': 2, '/': 2, 
