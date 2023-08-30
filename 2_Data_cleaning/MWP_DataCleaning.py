@@ -19,4 +19,11 @@ stemmer = SnowballStemmer(language='english')
 
 
 # Convert fractions to floating point numbers
-def convert_to_fl
+def convert_to_float(frac_str):
+    try:
+        return float(frac_str)
+    except ValueError:
+        num, denom = frac_str.split('/')
+        try:
+            leading, num = num.split(' ')
+            whole = float(leading)
