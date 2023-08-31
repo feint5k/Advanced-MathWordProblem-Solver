@@ -45,4 +45,10 @@ def postfix_equation(equ_list):
         elif elem == ')':
             while 1:
                 op = stack.pop()
+                if op == '(':
+                    break
+                else:
+                    post_equ.append(op)
+        elif elem in op_list:
+            while 1:
  
