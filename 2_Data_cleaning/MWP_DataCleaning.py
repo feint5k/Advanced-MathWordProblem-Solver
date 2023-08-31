@@ -38,4 +38,11 @@ def postfix_equation(equ_list):
     stack = []
     post_equ = []
     op_list = ['+', '-', '*', '/', '^']
-    priori = {'^': 3, '*': 2, '/': 2, 
+    priori = {'^': 3, '*': 2, '/': 2, '+': 1, '-': 1}
+    for elem in equ_list:
+        if elem == '(':
+            stack.append('(')
+        elif elem == ')':
+            while 1:
+                op = stack.pop()
+ 
