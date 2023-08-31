@@ -51,4 +51,8 @@ def postfix_equation(equ_list):
                     post_equ.append(op)
         elif elem in op_list:
             while 1:
- 
+                if not stack:
+                    break
+                elif stack[-1] == '(':
+                    break
+                elif priori[elem] > priori[stack
