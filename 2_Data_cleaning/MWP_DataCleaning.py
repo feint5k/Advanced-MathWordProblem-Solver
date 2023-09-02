@@ -68,4 +68,8 @@ def postfix_equation(equ_list):
     return post_equ
 
 
-# Identification and filtering of univaria
+# Identification and filtering of univariable equations
+char_set = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '(', ')', '+', '-', '/', '*'}
+df_cleaned = pd.DataFrame()
+for id_, row in df.iterrows():
+    l, r = row['equation
