@@ -61,4 +61,11 @@ def postfix_equation(equ_list):
                     op = stack.pop()
                     post_equ.append(op)
             stack.append(elem)
- 
+        else:
+            post_equ.append(elem)
+    while stack:
+        post_equ.append(stack.pop())
+    return post_equ
+
+
+# Identification and filtering of univaria
