@@ -100,4 +100,11 @@ final_num_postn_list = {}
 numtemp_order = {}
 
 for id_, row in df_cleaned.iterrows():
-    # Converting fractions and ordinals to 
+    # Converting fractions and ordinals to values through appropriate sub-routines and string builder ops
+    if not bool(re.search(r'[\d]+', row['text'])):
+        continue
+    sb = ""
+    numSb = ""
+    val = 0
+    prevToken = ""
+  
