@@ -115,4 +115,10 @@ for id_, row in df_cleaned.iterrows():
                 sb = sb + " " + str(val)
                 if tokens in fraction:
                     sb = sb + fraction[tokens]
-                elif stemmer.stem(tokens) in fra
+                elif stemmer.stem(tokens) in fraction:
+                    sb = sb + fraction[stemmer.stem(tokens)]
+                else:
+                    sb = sb + " " + tokens
+                val = 0
+            else:
+       
