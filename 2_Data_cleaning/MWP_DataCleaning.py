@@ -80,4 +80,16 @@ for id_, row in df.iterrows():
         if flagr:
             row['equations'] = r + '=' + l
 
-     
+        df_cleaned = df_cleaned.append(row)
+
+k = 0
+
+numLists = {}
+numLists_idx = {}
+eqLists_idx = {}
+eqLists = {}
+texts = {}
+equations_List = {}
+final_ans = {}
+numListMAP = {}
+final_replaced_text
