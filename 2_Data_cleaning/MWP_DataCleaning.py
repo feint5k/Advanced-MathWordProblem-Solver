@@ -121,4 +121,10 @@ for id_, row in df_cleaned.iterrows():
                     sb = sb + " " + tokens
                 val = 0
             else:
-       
+                if tokens in numMap.keys():
+                    sb = sb + " " + str(numMap[tokens])
+                else:
+                    sb = sb + " " + tokens
+        prevToken = tokens
+
+    re
