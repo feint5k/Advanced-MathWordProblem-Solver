@@ -75,4 +75,9 @@ for id_, row in df.iterrows():
     l, r = row['equations'].split("=", 1)
     lSet, rSet = set(l.replace(" ", "")), set(r.replace(" ", ""))
     flagl = (len(l.strip()) == 1 and not l.strip().isdigit() and len(rSet - char_set) == 0)
-    flagr = (len(r.
+    flagr = (len(r.strip()) == 1 and not r.strip().isdigit() and len(lSet - char_set) == 0)
+    if flagl or flagr:
+        if flagr:
+            row['equations'] = r + '=' + l
+
+     
