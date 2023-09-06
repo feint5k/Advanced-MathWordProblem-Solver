@@ -107,4 +107,9 @@ for id_, row in df_cleaned.iterrows():
     numSb = ""
     val = 0
     prevToken = ""
-  
+    for tokens in nltk.word_tokenize((row['text'])):
+        try:
+            val += w2n.word_to_num(tokens)
+        except ValueError:
+            if val > 0:
+                sb = sb + 
