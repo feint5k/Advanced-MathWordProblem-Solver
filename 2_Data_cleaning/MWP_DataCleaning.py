@@ -112,4 +112,7 @@ for id_, row in df_cleaned.iterrows():
             val += w2n.word_to_num(tokens)
         except ValueError:
             if val > 0:
-                sb = sb + 
+                sb = sb + " " + str(val)
+                if tokens in fraction:
+                    sb = sb + fraction[tokens]
+                elif stemmer.stem(tokens) in fra
