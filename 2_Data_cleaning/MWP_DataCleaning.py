@@ -127,4 +127,9 @@ for id_, row in df_cleaned.iterrows():
                     sb = sb + " " + tokens
         prevToken = tokens
 
-    re
+    re.sub(' +', ' ', sb)
+    sb = sb.strip()
+
+    # Re-structure equation anomalies for normalization
+    row['equations'] = row['equations'].replace(' ', '')
+    eqs = row['equati
