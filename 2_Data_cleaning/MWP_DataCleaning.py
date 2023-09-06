@@ -92,4 +92,12 @@ texts = {}
 equations_List = {}
 final_ans = {}
 numListMAP = {}
-final_replaced_text
+final_replaced_text = {}
+final_replaced_eq = {}
+final_replaced_eq_post = {}
+final_number_list = {}
+final_num_postn_list = {}
+numtemp_order = {}
+
+for id_, row in df_cleaned.iterrows():
+    # Converting fractions and ordinals to 
