@@ -72,4 +72,7 @@ def postfix_equation(equ_list):
 char_set = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '(', ')', '+', '-', '/', '*'}
 df_cleaned = pd.DataFrame()
 for id_, row in df.iterrows():
-    l, r = row['equation
+    l, r = row['equations'].split("=", 1)
+    lSet, rSet = set(l.replace(" ", "")), set(r.replace(" ", ""))
+    flagl = (len(l.strip()) == 1 and not l.strip().isdigit() and len(rSet - char_set) == 0)
+    flagr = (len(r.
