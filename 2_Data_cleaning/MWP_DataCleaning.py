@@ -132,4 +132,8 @@ for id_, row in df_cleaned.iterrows():
 
     # Re-structure equation anomalies for normalization
     row['equations'] = row['equations'].replace(' ', '')
-    eqs = row['equati
+    eqs = row['equations'][0]
+
+    for i in range(1, len(row['equations']) - 1):
+        if row['equations'][i] == '(':
+            if row['equations'][i - 1] == ')' or row['equations'][i - 1].isdigit():
