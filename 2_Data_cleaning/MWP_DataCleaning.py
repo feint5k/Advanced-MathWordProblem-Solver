@@ -140,4 +140,8 @@ for id_, row in df_cleaned.iterrows():
                 eqs += '*' + row['equations'][i]
             else:
                 eqs += row['equations'][i]
-        elif row['equations'][i + 1].isdigit() and row['equat
+        elif row['equations'][i + 1].isdigit() and row['equations'][i] == ')':
+            eqs += row['equations'][i] + "*"
+
+        elif row['equations'][i] == '-' and (row['equations'][i - 1].isdigit() or row['equations'][i - 1] == ')') and \
+    
