@@ -137,3 +137,7 @@ for id_, row in df_cleaned.iterrows():
     for i in range(1, len(row['equations']) - 1):
         if row['equations'][i] == '(':
             if row['equations'][i - 1] == ')' or row['equations'][i - 1].isdigit():
+                eqs += '*' + row['equations'][i]
+            else:
+                eqs += row['equations'][i]
+        elif row['equations'][i + 1].isdigit() and row['equat
