@@ -153,3 +153,7 @@ for id_, row in df_cleaned.iterrows():
     # Extract different number types from the text in order
     numList = re.findall(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', sb)
     if len(numList) == 0:
+        continue
+    # Extract different number types from the equation in order
+    eqNumList = re.findall(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', eqs)
+    # Get the pos
