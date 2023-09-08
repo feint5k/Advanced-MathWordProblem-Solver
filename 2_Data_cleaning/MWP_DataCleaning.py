@@ -166,4 +166,10 @@ for id_, row in df_cleaned.iterrows():
     numLists[id_] = numList
     numLists_idx[id_] = id_pattern
     eqLists_idx[id_] = eqid_pattern
-    texts[id_] 
+    texts[id_] = sb
+    eqLists[id_] = eqNumList
+    equations_List[id_] = eqs
+    final_ans[id_] = row['ans']
+
+# Adding space between numbers for ease of identification
+for id
