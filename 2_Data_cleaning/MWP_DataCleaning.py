@@ -181,4 +181,9 @@ for id, text in texts.items():
     modified_text += text[end:]
 
     # Re-evaluate positions of variables in the modified text
-    numList = re.findall(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', modified_
+    numList = re.findall(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', modified_text)
+    if len(numList) == 0:
+        continue
+    id_pattern = [m.span() for m in re.finditer(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', modified_text)]
+
+    # as
