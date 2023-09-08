@@ -158,4 +158,6 @@ for id_, row in df_cleaned.iterrows():
     eqNumList = re.findall(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', eqs)
     # Get the positions of the numbers in the text
     id_pattern = [m.span() for m in re.finditer(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', sb)]
-    # Get the positions of the numbers in the e
+    # Get the positions of the numbers in the equation
+    eqid_pattern = [m.span() for m in re.finditer(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', eqs)]
+    if len(set(numList)) < len(set(eqNumLi
