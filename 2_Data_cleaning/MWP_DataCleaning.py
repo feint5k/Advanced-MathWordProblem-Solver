@@ -186,4 +186,9 @@ for id, text in texts.items():
         continue
     id_pattern = [m.span() for m in re.finditer(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', modified_text)]
 
-    # as
+    # assert (len(numList) == len(numLists[id]))
+    # for i in range(len(numList)):
+    #     assert (numList[i].strip() == numLists[id][i].strip())
+
+    numLists[id] = numList
+    numLists_idx[id
