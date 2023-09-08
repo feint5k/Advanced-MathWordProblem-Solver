@@ -178,3 +178,7 @@ for id, text in texts.items():
     for (start, end) in numLists_idx[id]:
         modified_text += text[prev:start] + ' ' + text[start:end] + ' '
         prev = end
+    modified_text += text[end:]
+
+    # Re-evaluate positions of variables in the modified text
+    numList = re.findall(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', modified_
