@@ -150,4 +150,6 @@ for id_, row in df_cleaned.iterrows():
             eqs += row['equations'][i]
     eqs += row['equations'][-1]
 
-  
+    # Extract different number types from the text in order
+    numList = re.findall(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', sb)
+    if len(numList) == 0:
