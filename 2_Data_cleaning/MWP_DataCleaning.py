@@ -172,4 +172,9 @@ for id_, row in df_cleaned.iterrows():
     final_ans[id_] = row['ans']
 
 # Adding space between numbers for ease of identification
-for id
+for id, text in texts.items():
+    modified_text = ''
+    prev = 0
+    for (start, end) in numLists_idx[id]:
+        modified_text += text[prev:start] + ' ' + text[start:end] + ' '
+        prev = end
