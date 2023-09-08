@@ -156,4 +156,6 @@ for id_, row in df_cleaned.iterrows():
         continue
     # Extract different number types from the equation in order
     eqNumList = re.findall(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', eqs)
-    # Get the pos
+    # Get the positions of the numbers in the text
+    id_pattern = [m.span() for m in re.finditer(r'-?[\d]* *[\d]+ *\/ *?[\d]*|-?[\d]+\.?[\d]*', sb)]
+    # Get the positions of the numbers in the e
