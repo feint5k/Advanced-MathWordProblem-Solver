@@ -208,4 +208,12 @@ for id, vals in numLists.items():
             numListMap[tmp] = 'temp_' + str(k)
             k += 1
     final_number_list[id] = num_list
-    final_num_postn_list[i
+    final_num_postn_list[id] = num_postion
+
+    numListMAP[id] = numListMap
+    replaced_text = ''
+    prev_index = 0
+    final_num_list = []
+    num_temps = []
+    for i in range(len(vals)):
+     
