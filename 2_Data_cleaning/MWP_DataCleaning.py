@@ -227,4 +227,10 @@ for id, vals in numLists.items():
         prev_index = end
     replaced_text += texts[id][numLists_idx[id][i][-1]:]
     final_replaced_text[id] = replaced_text
-    nu
+    numtemp_order[id] = num_temps
+
+# Replace equations with template variables
+for id, vals in eqLists.items():
+    equation = equations_List[id]
+    replaced_eq = ''
+    prev_index 
