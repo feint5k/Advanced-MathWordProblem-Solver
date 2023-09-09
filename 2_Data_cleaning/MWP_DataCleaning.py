@@ -199,4 +199,8 @@ for id, vals in numLists.items():
     numListMap = {}
     num_list = []
     num_postion = []
-   
+    k = 0
+    for i in range(len(vals)):
+        tmp = convert_to_float(vals[i]) if vals[i].find("/") != -1 else vals[i]
+        if tmp not in numListMap.keys():
+            num_list.append(str(tmp))
