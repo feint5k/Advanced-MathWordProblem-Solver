@@ -216,4 +216,7 @@ for id, vals in numLists.items():
     final_num_list = []
     num_temps = []
     for i in range(len(vals)):
-     
+        tmp = convert_to_float(vals[i]) if vals[i].find("/") != -1 else vals[i]
+        final_num_list.append(tmp)
+        start = numLists_idx[id][i][0]
+        end = num
