@@ -191,4 +191,12 @@ for id, text in texts.items():
     #     assert (numList[i].strip() == numLists[id][i].strip())
 
     numLists[id] = numList
-    numLists_idx[id
+    numLists_idx[id] = id_pattern
+    texts[id] = modified_text
+
+# Replace questions text with template variables
+for id, vals in numLists.items():
+    numListMap = {}
+    num_list = []
+    num_postion = []
+   
