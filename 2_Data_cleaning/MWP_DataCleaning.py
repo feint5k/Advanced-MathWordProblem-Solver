@@ -222,4 +222,9 @@ for id, vals in numLists.items():
         end = numLists_idx[id][i][1]
         unchanged = texts[id][prev_index:start]
         changed = texts[id][start:end]
-        replaced_text = replaced_text + unchanged + numListMap[tmp
+        replaced_text = replaced_text + unchanged + numListMap[tmp]
+        num_temps.append(numListMap[tmp])
+        prev_index = end
+    replaced_text += texts[id][numLists_idx[id][i][-1]:]
+    final_replaced_text[id] = replaced_text
+    nu
