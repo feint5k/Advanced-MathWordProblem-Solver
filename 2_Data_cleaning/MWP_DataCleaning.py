@@ -233,4 +233,8 @@ for id, vals in numLists.items():
 for id, vals in eqLists.items():
     equation = equations_List[id]
     replaced_eq = ''
-    prev_index 
+    prev_index = 0
+    for i in range(len(vals)):
+        tmp = convert_to_float(vals[i]) if vals[i].find("/") != -1 else vals[i]
+        start = eqLists_idx[id][i][0]
+        end = eqLi
