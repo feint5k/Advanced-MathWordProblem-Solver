@@ -204,3 +204,8 @@ for id, vals in numLists.items():
         tmp = convert_to_float(vals[i]) if vals[i].find("/") != -1 else vals[i]
         if tmp not in numListMap.keys():
             num_list.append(str(tmp))
+            num_postion.append(numLists_idx[id][i][0])
+            numListMap[tmp] = 'temp_' + str(k)
+            k += 1
+    final_number_list[id] = num_list
+    final_num_postn_list[i
