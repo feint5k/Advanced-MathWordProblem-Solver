@@ -237,4 +237,8 @@ for id, vals in eqLists.items():
     for i in range(len(vals)):
         tmp = convert_to_float(vals[i]) if vals[i].find("/") != -1 else vals[i]
         start = eqLists_idx[id][i][0]
-        end = eqLi
+        end = eqLists_idx[id][i][1]
+        unchanged = equation[prev_index:start]
+        changed = equation[start:end]
+        replaced_eq = replaced_eq + " " + unchanged + " " + numListMAP[id][tmp]
+        prev_in
