@@ -273,4 +273,9 @@ for id, text in texts.items():
             tmp = convert_to_float(words[i]) if words[i].find("/") != -1 else words[i]
             min_ind[str(tmp)] = min(min_ind[str(tmp)], i)
 
-    fo
+    for val in final_number_list[id]:
+        numpos.append(min_ind[str(val).replace(' ', '')])
+
+    final_num_postn_list[id] = numpos
+
+# Create json dump from the updated
