@@ -269,4 +269,8 @@ for id, text in texts.items():
     min_ind = {i.replace(' ', ''): float('inf') for i in final_number_list[id]}
 
     for i in range(len(words)):
-        if words[i] in [j.replace(' '
+        if words[i] in [j.replace(' ', '') for j in numLists[id]]:
+            tmp = convert_to_float(words[i]) if words[i].find("/") != -1 else words[i]
+            min_ind[str(tmp)] = min(min_ind[str(tmp)], i)
+
+    fo
