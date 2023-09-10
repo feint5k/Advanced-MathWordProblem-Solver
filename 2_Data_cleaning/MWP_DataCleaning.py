@@ -252,4 +252,10 @@ for id, vals in eqLists.items():
         if list_eqs[i] == '':
             continue
         elif list_eqs[i].find('temp') == -1 and len(list_eqs[i]) > 1:
-            equation_normalized.extend(list(list_e
+            equation_normalized.extend(list(list_eqs[i]))
+        else:
+            equation_normalized.append(list_eqs[i])
+
+    final_replaced_eq[id] = equation_normalized
+
+    eq_norm_postfix = postfix_equation(equation_n
