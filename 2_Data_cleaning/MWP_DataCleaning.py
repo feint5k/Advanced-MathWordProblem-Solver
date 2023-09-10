@@ -263,4 +263,10 @@ for id, vals in eqLists.items():
 
 # Calculate word position for numbers in text
 for id, text in texts.items():
-    words = [i.replace(' ', '') for
+    words = [i.replace(' ', '') for i in text.split()]
+    numpos = []
+
+    min_ind = {i.replace(' ', ''): float('inf') for i in final_number_list[id]}
+
+    for i in range(len(words)):
+        if words[i] in [j.replace(' '
