@@ -249,4 +249,7 @@ for id, vals in eqLists.items():
     equation_normalized = []
 
     for i in range(len(list_eqs)):
-        if list_
+        if list_eqs[i] == '':
+            continue
+        elif list_eqs[i].find('temp') == -1 and len(list_eqs[i]) > 1:
+            equation_normalized.extend(list(list_e
