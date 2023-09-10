@@ -258,4 +258,9 @@ for id, vals in eqLists.items():
 
     final_replaced_eq[id] = equation_normalized
 
-    eq_norm_postfix = postfix_equation(equation_n
+    eq_norm_postfix = postfix_equation(equation_normalized)
+    final_replaced_eq_post[id] = eq_norm_postfix
+
+# Calculate word position for numbers in text
+for id, text in texts.items():
+    words = [i.replace(' ', '') for
