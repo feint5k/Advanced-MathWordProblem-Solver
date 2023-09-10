@@ -241,4 +241,12 @@ for id, vals in eqLists.items():
         unchanged = equation[prev_index:start]
         changed = equation[start:end]
         replaced_eq = replaced_eq + " " + unchanged + " " + numListMAP[id][tmp]
-        prev_in
+        prev_index = end
+
+    replaced_eq += " " + equation[eqLists_idx[id][i][-1]:]
+
+    list_eqs = replaced_eq.split(" ")
+    equation_normalized = []
+
+    for i in range(len(list_eqs)):
+        if list_
