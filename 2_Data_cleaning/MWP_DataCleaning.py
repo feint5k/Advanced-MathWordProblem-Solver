@@ -286,4 +286,8 @@ for id in final_replaced_text.keys():
     data_template["expression"] = equations_List[id]
     data_template["mid_template"] = final_replaced_eq[id]
     data_template["num_list"] = final_number_list[id]
-    data_template["index"] = str(id
+    data_template["index"] = str(id)
+    data_template["numtemp_order"] = numtemp_order[id]
+    data_template["post_template"] = final_replaced_eq_post[id][2:]
+    if final_ans[id].find("|") != -1:
+        data_template["ans"] = 
