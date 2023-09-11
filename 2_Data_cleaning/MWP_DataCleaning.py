@@ -278,4 +278,9 @@ for id, text in texts.items():
 
     final_num_postn_list[id] = numpos
 
-# Create json dump from the updated
+# Create json dump from the updated dictionaries
+data = {}
+for id in final_replaced_text.keys():
+    data_template = {}
+    data_template["template_text"] = final_replaced_text[id]
+    data_tem
