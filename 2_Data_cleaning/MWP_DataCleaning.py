@@ -283,4 +283,7 @@ data = {}
 for id in final_replaced_text.keys():
     data_template = {}
     data_template["template_text"] = final_replaced_text[id]
-    data_tem
+    data_template["expression"] = equations_List[id]
+    data_template["mid_template"] = final_replaced_eq[id]
+    data_template["num_list"] = final_number_list[id]
+    data_template["index"] = str(id
