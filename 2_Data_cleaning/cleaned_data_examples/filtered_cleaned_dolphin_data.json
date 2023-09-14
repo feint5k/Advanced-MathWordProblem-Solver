@@ -2,4 +2,16 @@
   "1": {
     "template_text": "what is the sum of  temp_0  and  temp_0  ?",
     "expression": "x=1+1",
-  
+    "mid_template": [
+      "x",
+      "=",
+      "temp_0",
+      "+",
+      "temp_0"
+    ],
+    "num_list": [
+      "1"
+    ],
+    "index": "1",
+    "numtemp_order": [
+      "temp_
