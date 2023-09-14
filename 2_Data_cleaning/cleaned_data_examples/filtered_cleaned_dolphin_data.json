@@ -14,4 +14,15 @@
     ],
     "index": "1",
     "numtemp_order": [
-      "temp_
+      "temp_0",
+      "temp_0"
+    ],
+    "post_template": [
+      "temp_0",
+      "temp_0",
+      "+"
+    ],
+    "ans": "2",
+    "text": "what is the sum of  1  and  1  ?",
+    "num_position": [
+      5
