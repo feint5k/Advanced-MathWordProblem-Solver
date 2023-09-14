@@ -290,4 +290,8 @@ for id in final_replaced_text.keys():
     data_template["numtemp_order"] = numtemp_order[id]
     data_template["post_template"] = final_replaced_eq_post[id][2:]
     if final_ans[id].find("|") != -1:
-        data_template["ans"] = 
+        data_template["ans"] = final_ans[id].split("|")[1].strip()
+    elif final_ans[id].find("/") != -1:
+        data_template["ans"] = str(convert_to_float(final_ans[id]))
+    else:
+        data_template[
