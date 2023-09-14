@@ -294,4 +294,9 @@ for id in final_replaced_text.keys():
     elif final_ans[id].find("/") != -1:
         data_template["ans"] = str(convert_to_float(final_ans[id]))
     else:
-        data_template[
+        data_template["ans"] = final_ans[id]
+    data_template["text"] = texts[id]
+    data_template["num_position"] = final_num_postn_list[id]
+    data[id] = data_template
+
+with open('
