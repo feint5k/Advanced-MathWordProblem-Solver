@@ -26,3 +26,7 @@
     "text": "what is the sum of  1  and  1  ?",
     "num_position": [
       5
+    ]
+  },
+  "65": {
+    "template_text": "how many  temp_0  digit numbers can you make using the digits  temp_1  ,  temp_2  ,  temp_0  , and  temp_3  if the hundreds digit is prime a
