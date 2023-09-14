@@ -299,4 +299,5 @@ for id in final_replaced_text.keys():
     data_template["num_position"] = final_num_postn_list[id]
     data[id] = data_template
 
-with open('
+with open('final_dolphin_data.json', 'w') as f:
+    json.dump(data, f)
