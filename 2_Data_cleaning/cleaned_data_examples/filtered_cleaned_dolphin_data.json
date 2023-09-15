@@ -51,4 +51,15 @@
       "temp_0",
       "temp_1",
       "temp_2",
-     
+      "temp_0",
+      "temp_3"
+    ],
+    "post_template": [
+      "temp_2",
+      "temp_0",
+      "*",
+      "temp_2",
+      "*"
+    ],
+    "ans": "12",
+    "text": "how many  3  digit numbers can
