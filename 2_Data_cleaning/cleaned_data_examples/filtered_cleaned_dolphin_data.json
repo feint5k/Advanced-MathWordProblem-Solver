@@ -62,4 +62,9 @@
       "*"
     ],
     "ans": "12",
-    "text": "how many  3  digit numbers can
+    "text": "how many  3  digit numbers can you make using the digits  1  ,  2  ,  3  , and  4  if the hundreds digit is prime and repetition of a digit is not permitted ?",
+    "num_position": [
+      2,
+      11,
+      13,
+     
