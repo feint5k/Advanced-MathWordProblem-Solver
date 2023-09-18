@@ -3,4 +3,5 @@ a number subtracted from 17 gives the quotient of 48 and -8. find the number.,23
 what is the sum of 1 and 1?,2,x = 1 + 1,x
 which value is a solution to 60+2x=12x+10?,5,60+2*x=12*x+10,x
 "phil found that the sum of twice a number and -21 is 129 greater than the opposite of the number, what is the number?",50,(2*n + (-21)) = 129 + (-1 * n),n
-forty-two more than a number divided by four is equal to fifty-two more than the same number divided by fourteen. what is the number?,56,4
+forty-two more than a number divided by four is equal to fifty-two more than the same number divided by fourteen. what is the number?,56,42 + n / 4 = 52 + n / 14,n
+"a number when multiplied by 7/18 instead of 7/8 and got the result 770 less than the actual result , find the original number?",1584,7/18*n 
