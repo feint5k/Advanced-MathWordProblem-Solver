@@ -40,4 +40,5 @@ two more than twice a number is equal to the number itself. find the number.,-2,
 "when the square of an integer is added to ten times the integer, the sum is zero. what is the integer?",-10 or 0,10*n + n^2 = 0,n
 two consecutive odd integers have a sum of 48. what is the largest of the two integers?,25,(2*n+1)+(2*n+3) = 48,2*n+3
 four times an integer plus 5 is equal to the square of the integer. what is the integer?,-1 or 5,4*n + 5 = n^2,n
-"robert thinks of a number. when he multiples his number by 5 and subtract
+"robert thinks of a number. when he multiples his number by 5 and subtracts 16 from the result, he gets the same answer as to when he adds 10 to his number and multiples the result by 3. find the number robert is thinking of.",23,5*x - 16 = (x + 10) * 3,x
+the sum o
