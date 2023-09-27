@@ -46,4 +46,6 @@ twice the sum of a number and sixteen is five less than three times the number?f
 find a number such that subtracting its reciprocal from the number gives 16/15.,5/3 or -3/5 | 1.667 or -0.6,n - 1/n = 16/15,n
 "if 240 : 3 = x : 5, what's the value of x?",400,240/3 = x/5,x
 "given that 7 : 2 = x : 8,find the value of x",28,7/2 = x/8,x
-how many eight-digit telephone numbers 
+how many eight-digit telephone numbers are possible if the first digit must be nonzero?,90000000 | 9E7,n = 9*10*10*10*10*10*10*10,n
+20% of the number is 3. find the number?,15,0.2*x = 3,x
+5 times a number equals 20what is the num
