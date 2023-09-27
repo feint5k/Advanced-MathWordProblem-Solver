@@ -43,4 +43,7 @@ four times an integer plus 5 is equal to the square of the integer. what is the 
 "robert thinks of a number. when he multiples his number by 5 and subtracts 16 from the result, he gets the same answer as to when he adds 10 to his number and multiples the result by 3. find the number robert is thinking of.",23,5*x - 16 = (x + 10) * 3,x
 the sum of two times a number and eight is equal to three times the difference between the number and four. what's the number?,20,2*n + 8 = 3(n - 4),n
 twice the sum of a number and sixteen is five less than three times the number?find the number?,37,2(n + 16) = 3*n - 5,n
-find a number such that subtracting its reciprocal from the number gives 16/15.,5/3 or -3/5 | 1.667 or -0.6,n - 1/n = 
+find a number such that subtracting its reciprocal from the number gives 16/15.,5/3 or -3/5 | 1.667 or -0.6,n - 1/n = 16/15,n
+"if 240 : 3 = x : 5, what's the value of x?",400,240/3 = x/5,x
+"given that 7 : 2 = x : 8,find the value of x",28,7/2 = x/8,x
+how many eight-digit telephone numbers 
