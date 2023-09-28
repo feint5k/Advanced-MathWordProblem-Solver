@@ -61,4 +61,6 @@ the sum of a number and twice its reciprocal is 3. what is the number?,2 or 1,x 
 "if a number is multiplied by 5 more than twice that number, the result is 12. find the number?",3/2 or -4 | 1.5 or -4,x * (2*x + 5) = 12,x
 a 104 degree angle with 2 congruent sides is called?  a 104 degree angle with 2 congruent sides is called?,4 or 2,x^2 + 8 = 6*x,x
 the sum of a number and seven times the number is 112. what is the number?,14,x + 7*x = 112,x
-"how many 3-digit positive integers are odd and do not contain the di
+"how many 3-digit positive integers are odd and do not contain the digit ""5""?",288,n = 8 * 9 * 4,n
+"how many 3 digit even numbers can be made using the digits 1, 2, 3, 4, 6, 7, if no digit is repeated?",60,n=3*5*4,n
+"how many 3 digit numbers can 
