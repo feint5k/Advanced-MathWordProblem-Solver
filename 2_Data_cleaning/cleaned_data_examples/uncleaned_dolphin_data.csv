@@ -48,4 +48,7 @@ find a number such that subtracting its reciprocal from the number gives 16/15.,
 "given that 7 : 2 = x : 8,find the value of x",28,7/2 = x/8,x
 how many eight-digit telephone numbers are possible if the first digit must be nonzero?,90000000 | 9E7,n = 9*10*10*10*10*10*10*10,n
 20% of the number is 3. find the number?,15,0.2*x = 3,x
-5 times a number equals 20what is the num
+5 times a number equals 20what is the number?,4,5*n = 20,n
+15 is 25% of what number?,60,15 = 0.25*x,x
+36 is 60% of what number?,60,36 = 0.6*x,x
+four times the difference of a number and one is equal to six ti
