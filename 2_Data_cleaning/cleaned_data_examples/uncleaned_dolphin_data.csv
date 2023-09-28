@@ -56,4 +56,6 @@ four times the difference of a number and one is equal to six times the sum of t
 "when 4 is added to 5 times a number,the number increases by 50. find the number.",23/2 | 11.5,5*n + 4 = n + 50,n
 the sum of a number and its reciprocal is 6.41. what is the number?,6.25 or 0.16 | 25/4 or 4/25,n + 1/n = 6.41,n
 the sum of a number and its reciprocal is 13. find this number.,12.923 or 0.0774,n + 1/n = 13,n
-the sum of a number and twice its reciprocal is 3. what i
+the sum of a number and twice its reciprocal is 3. what is the number?,2 or 1,x + 2/x = 3,x
+"when the number x is increased by x%, it becomes 24. find x.",20 or -120,x*(1+0.01*x) = 24,x
+"if a number is multiplied by 5 more than twice that num
