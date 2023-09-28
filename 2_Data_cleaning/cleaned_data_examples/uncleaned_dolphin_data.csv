@@ -58,4 +58,5 @@ the sum of a number and its reciprocal is 6.41. what is the number?,6.25 or 0.16
 the sum of a number and its reciprocal is 13. find this number.,12.923 or 0.0774,n + 1/n = 13,n
 the sum of a number and twice its reciprocal is 3. what is the number?,2 or 1,x + 2/x = 3,x
 "when the number x is increased by x%, it becomes 24. find x.",20 or -120,x*(1+0.01*x) = 24,x
-"if a number is multiplied by 5 more than twice that num
+"if a number is multiplied by 5 more than twice that number, the result is 12. find the number?",3/2 or -4 | 1.5 or -4,x * (2*x + 5) = 12,x
+a 104 degree angle with 2 congruent sides is called?  a 104 degree angle with 2 congruent sides is called
