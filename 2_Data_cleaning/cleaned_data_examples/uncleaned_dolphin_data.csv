@@ -70,4 +70,6 @@ the sum of one third of a number and its reciprocal is the same as 49 divided by
 if the average of 20 different positive numbers is 20 then what is the greatest possible number among these 20 numbers?,210,(1+(20-1))*(20-1)/2 + x = 20*20,x
 "if 9n^2 - 30n + c is a perfect square for all integers n, what is the value of c?",25,30^2 = 4 * 9 * c,c
 what is the least value of k if 3x^2 + 6x + k is never negative?,3,6^2 = 4*3*k,k
-find the value of c that makes x^2+18x+c a perfect square tri
+find the value of c that makes x^2+18x+c a perfect square trinomial.,81,18^2 = 4 * 1 * c,c
+find this quantity: one half of the quantity multiplied by one third of the quantity equals 24.,12 or -12,(1/2)q * (1/3)q = 24,q
+"if the expression x^2 - kx 
