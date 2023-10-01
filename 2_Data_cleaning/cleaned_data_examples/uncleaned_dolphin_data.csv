@@ -64,4 +64,5 @@ the sum of a number and seven times the number is 112. what is the number?,14,x 
 "how many 3-digit positive integers are odd and do not contain the digit ""5""?",288,n = 8 * 9 * 4,n
 "how many 3 digit even numbers can be made using the digits 1, 2, 3, 4, 6, 7, if no digit is repeated?",60,n=3*5*4,n
 "how many 3 digit numbers can you make using the digits 1, 2, 3, and 4 if the hundreds digit is prime and repetition of a digit is not permitted?",12,n = 2 * 3 * 2,n
-a number is 110 less than its square. find
+a number is 110 less than its square. find all such numbers.,-10 or 11,n = n^2 - 110,n
+the sum of one third of a number and its reciprocal is the same as 49 divided by the number. find the number,12 or -12,n/3 + 1/n =
