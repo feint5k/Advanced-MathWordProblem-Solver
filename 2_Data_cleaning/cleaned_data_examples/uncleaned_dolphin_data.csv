@@ -67,4 +67,5 @@ the sum of a number and seven times the number is 112. what is the number?,14,x 
 a number is 110 less than its square. find all such numbers.,-10 or 11,n = n^2 - 110,n
 the sum of one third of a number and its reciprocal is the same as 49 divided by the number. find the number,12 or -12,n/3 + 1/n = 49/n,n
 "what number, when added to the number three or multiplied to the three, gives the same result?",3/2 | 1.5,n + 3 = 3*n,n
-if the average of 20 different positive numbers 
+if the average of 20 different positive numbers is 20 then what is the greatest possible number among these 20 numbers?,210,(1+(20-1))*(20-1)/2 + x = 20*20,x
+"if 9n^2 - 30n + c is a perfect square for all integers n, what is the va
