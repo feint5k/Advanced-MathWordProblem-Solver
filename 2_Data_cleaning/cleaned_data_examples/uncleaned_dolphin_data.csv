@@ -73,4 +73,6 @@ what is the least value of k if 3x^2 + 6x + k is never negative?,3,6^2 = 4*3*k,k
 find the value of c that makes x^2+18x+c a perfect square trinomial.,81,18^2 = 4 * 1 * c,c
 find this quantity: one half of the quantity multiplied by one third of the quantity equals 24.,12 or -12,(1/2)q * (1/3)q = 24,q
 "if the expression x^2 - kx - 12 is equal to zero when x=4, what is the value of k?",1,4^2 - 4*k - 12 = 0,k
-a 3- digit number in which one digit is the average of the other two digits is called an aver
+a 3- digit number in which one digit is the average of the other two digits is called an average number. 456 is an average number because 5 is the average of 4 and 6. how many three digit average numbers are there?,45,n = 9 * 5,n
+"what is 8% of 2,000.",160,x = 2000 * 0.08,x
+what's 8
