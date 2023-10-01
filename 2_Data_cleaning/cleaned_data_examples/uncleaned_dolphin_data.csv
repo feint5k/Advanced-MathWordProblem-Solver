@@ -72,4 +72,5 @@ if the average of 20 different positive numbers is 20 then what is the greatest 
 what is the least value of k if 3x^2 + 6x + k is never negative?,3,6^2 = 4*3*k,k
 find the value of c that makes x^2+18x+c a perfect square trinomial.,81,18^2 = 4 * 1 * c,c
 find this quantity: one half of the quantity multiplied by one third of the quantity equals 24.,12 or -12,(1/2)q * (1/3)q = 24,q
-"if the expression x^2 - kx 
+"if the expression x^2 - kx - 12 is equal to zero when x=4, what is the value of k?",1,4^2 - 4*k - 12 = 0,k
+a 3- digit number in which one digit is the average of the other two digits is called an aver
