@@ -80,4 +80,6 @@ one fourth of one third is the same as one half of what fraction?,1/6,(1/4) * (1
 "when the number n is multiplied by 4, the result is the same as when 4 is added to n. what is the value of 3n?",4,4*n = 4 + n,3*n
 "when the number w is multiplied by 4, the result is the same as when 4 is added to w. what is the value of 3w?",4,4*w = w + 4,3*w
 how many whole numbers less than 500 have seven as the sum of their digits?,30,n = 1 + 7 + 7 + 6 + 5 + 4,n
-"if 4 less than 3 times a certain number i
+"if 4 less than 3 times a certain number is 2 more than the number, what is the number",3,3*x - 4 = 2 + x,x
+"when twice a number is decreased by 8, the result is the number increased by 7. find the number?",15,2*x - 8 = x + 7,x
+3
