@@ -87,4 +87,8 @@ how many whole numbers less than 500 have seven as the sum of their digits?,30,n
 "if the product of -3 and the opposite of a number is decreased by 7, the result is 1 greater than the number. what is the number?",4,-3*(-1 * n) - 7 = 1 + n,n
 what is the difference between the sum of the first 2004 positive integers and the sum of the next 2004 positive?,4016016,d = 2004 * (1 + 2004 - 1),d
 the sum of 2/3 and four times a number is equal to 5/6 subtracted from five times the number. find the number.,3/2 | 1.5,2/3 + 4*n = 5*n - 5/6,n
-"find the difference between the product of 26/22 and 3.09 and the sum of 3,507.00, 2.08, 11.50 and 16,712.00",-22251821/1100 | -20228.928,"x = 26/22 * 3.09 - (3507.00 + 2.08 + 11.50 + 16,7
+"find the difference between the product of 26/22 and 3.09 and the sum of 3,507.00, 2.08, 11.50 and 16,712.00",-22251821/1100 | -20228.928,"x = 26/22 * 3.09 - (3507.00 + 2.08 + 11.50 + 16,712.00)",x
+what is 5/9 times 36?,20,x = 5/9 * 36,x
+what number is 5 sixths of 100?,250/3 | 83.333,x = 5/6 * 100,x
+5/6 of a number is 3/4. what is the number?,9/10 | 0.9,5/6 * n = 3/4,n
+what is the va
