@@ -91,4 +91,5 @@ the sum of 2/3 and four times a number is equal to 5/6 subtracted from five time
 what is 5/9 times 36?,20,x = 5/9 * 36,x
 what number is 5 sixths of 100?,250/3 | 83.333,x = 5/6 * 100,x
 5/6 of a number is 3/4. what is the number?,9/10 | 0.9,5/6 * n = 3/4,n
-what is the va
+what is the value of x in the following equation?3x - 4(x + 1) + 10 = 0,6,3*x - 4(x + 1) + 10 = 0,x
+"a whole number between 100 and 1000 is to be formed so that one of the digits is 6, and all the digits are different.
