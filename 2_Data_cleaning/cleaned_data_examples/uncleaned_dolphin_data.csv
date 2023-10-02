@@ -84,4 +84,5 @@ how many whole numbers less than 500 have seven as the sum of their digits?,30,n
 "when twice a number is decreased by 8, the result is the number increased by 7. find the number?",15,2*x - 8 = x + 7,x
 3 less than 5 times a number is 11 more than the number? find the number.,7/2 | 3.5,5*n - 3 = 11 + n,n
 "the first three terms of an arithmetic sequence are (12-p), 2p, (4p-5) respectively where p is a constant.find the value of p",7,2*p - (12-p) = (4*p-5) - 2*p,p
-"if the product of -3 and the opposite of a number is decreased by 7, the resul
+"if the product of -3 and the opposite of a number is decreased by 7, the result is 1 greater than the number. what is the number?",4,-3*(-1 * n) - 7 = 1 + n,n
+what is the difference between the sum of the first 2004 positive integers and the sum of the nex
