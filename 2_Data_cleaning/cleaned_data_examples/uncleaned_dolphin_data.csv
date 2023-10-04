@@ -99,4 +99,5 @@ what number minus one-half is equal to negative one-half ?,0,x - 1/2 = -1/2,x
 16 over 24 minus 18 over 24?,-1/12 | -0.0833,x = 16/24 - 18/24,x
 "the quotient of -54 and 9, subtracted from 8 times a number, is -18. what's the number?",-3,8*n - (-54)/9 = -18,n
 "if 30% of 40% of a positive # is equal to 20% of w% of the same #, what is the value of w?",60,30/100*40/100*n = 20/100*w/100*n,w
-square root six over square root 7 multiplied by squ
+square root six over square root 7 multiplied by square root 14 over square root 3.,2,x = (sqrt(6)/sqrt(7)) * (sqrt(14)/sqrt(3)),x
+"if 4 is added to the square of a composite integer, the result is 14 less than 9 times that i
