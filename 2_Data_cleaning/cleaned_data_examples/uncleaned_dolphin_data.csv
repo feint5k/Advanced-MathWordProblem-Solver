@@ -103,4 +103,4 @@ square root six over square root 7 multiplied by square root 14 over square root
 "if 4 is added to the square of a composite integer, the result is 14 less than 9 times that integer. find the integer.",6,4 + n^2 = 9*n - 14,n
 "how many four-digit numbers can be formed using the digits 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 if the first digit cannot be 0? repeated digits are allowed.",9000,n = 9 * 10 * 10 * 10,n
 the equation is 10x - 19 = 9 - 4x. what's the value of x?,2,10*x - 19 = 9 - 4*x,x
-twelve less than 2 times a number is equal 
+twelve less than 2 times a number is equal to 15 minus 7 times the number.,3,2*n - 12 = 15 - 7*n,n
