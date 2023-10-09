@@ -1,0 +1,134 @@
+
+10
+297
+250 25 30
+loading finished
+RECUR EPOCH: 0, loss: 1.1682798597547743, train_acc_e: 0.6151079136690647, train_acc_i: 0.5679012345679012 time: 0.08729670445124309
+valid_acc_e: 0.75, valid_acc_i: 0.76, test_acc_e: 0.49333333333333335, test_acc_i: 0.41379310344827586
+originial 0
+saving... 0.76
+saveing ok!
+final test temp_acc:0.43333333333333335, ans_acc:0.43333333333333335
+
+RECUR EPOCH: 1, loss: 0.9512225806467818, train_acc_e: 0.6276978417266187, train_acc_i: 0.6008230452674898 time: 0.08907195727030436
+valid_acc_e: 0.75, valid_acc_i: 0.76, test_acc_e: 0.49333333333333335, test_acc_i: 0.41379310344827586
+originial 0.76
+saving... 0.76
+saveing ok!
+final test temp_acc:0.43333333333333335, ans_acc:0.43333333333333335
+
+RECUR EPOCH: 2, loss: 0.88405234725387, train_acc_e: 0.6276978417266187, train_acc_i: 0.6008230452674898 time: 0.09000606139500936
+valid_acc_e: 0.75, valid_acc_i: 0.76, test_acc_e: 0.49333333333333335, test_acc_i: 0.41379310344827586
+originial 0.76
+saving... 0.76
+saveing ok!
+final test temp_acc:0.43333333333333335, ans_acc:0.43333333333333335
+
+RECUR EPOCH: 3, loss: 0.8569288528505176, train_acc_e: 0.6276978417266187, train_acc_i: 0.6008230452674898 time: 0.09406771659851074
+valid_acc_e: 0.75, valid_acc_i: 0.76, test_acc_e: 0.49333333333333335, test_acc_i: 0.41379310344827586
+originial 0.76
+saving... 0.76
+saveing ok!
+final test temp_acc:0.43333333333333335, ans_acc:0.43333333333333335
+
+RECUR EPOCH: 4, loss: 0.8268176341743626, train_acc_e: 0.6420863309352518, train_acc_i: 0.6131687242798354 time: 0.09377397696177164
+valid_acc_e: 0.7857142857142857, valid_acc_i: 0.8, test_acc_e: 0.5733333333333334, test_acc_i: 0.4827586206896552
+originial 0.76
+saving... 0.8
+saveing ok!
+final test temp_acc:0.5, ans_acc:0.5
+
+RECUR EPOCH: 5, loss: 0.8387280844857172, train_acc_e: 0.6636690647482014, train_acc_i: 0.6460905349794238 time: 0.09163166284561157
+valid_acc_e: 0.7857142857142857, valid_acc_i: 0.8, test_acc_e: 0.5733333333333334, test_acc_i: 0.4827586206896552
+originial 0.8
+saving... 0.8
+saveing ok!
+final test temp_acc:0.5, ans_acc:0.5
+
+RECUR EPOCH: 6, loss: 0.7824347774678297, train_acc_e: 0.6690647482014388, train_acc_i: 0.6460905349794238 time: 0.09390345414479574
+valid_acc_e: 0.7321428571428571, valid_acc_i: 0.72, test_acc_e: 0.5466666666666666, test_acc_i: 0.4482758620689655
+jumping...
+
+RECUR EPOCH: 7, loss: 0.7914263799847889, train_acc_e: 0.658273381294964, train_acc_i: 0.6255144032921811 time: 0.09514609972635905
+valid_acc_e: 0.7857142857142857, valid_acc_i: 0.76, test_acc_e: 0.5866666666666667, test_acc_i: 0.4827586206896552
+jumping...
+
+RECUR EPOCH: 8, loss: 0.7353058999457968, train_acc_e: 0.6960431654676259, train_acc_i: 0.6337448559670782 time: 0.09473386208216349
+valid_acc_e: 0.7857142857142857, valid_acc_i: 0.8, test_acc_e: 0.5866666666666667, test_acc_i: 0.4827586206896552
+originial 0.8
+saving... 0.8
+saveing ok!
+final test temp_acc:0.5, ans_acc:0.5
+
+RECUR EPOCH: 9, loss: 0.7557127485549989, train_acc_e: 0.6672661870503597, train_acc_i: 0.6255144032921811 time: 0.09168526728947958
+valid_acc_e: 0.7321428571428571, valid_acc_i: 0.68, test_acc_e: 0.56, test_acc_i: 0.3793103448275862
+jumping...
+
+RECUR EPOCH: 10, loss: 0.6924405353059494, train_acc_e: 0.6816546762589928, train_acc_i: 0.5967078189300411 time: 0.09236328999201457
+valid_acc_e: 0.7678571428571429, valid_acc_i: 0.8, test_acc_e: 0.5866666666666667, test_acc_i: 0.4827586206896552
+originial 0.8
+saving... 0.8
+saveing ok!
+final test temp_acc:0.5, ans_acc:0.4666666666666667
+
+RECUR EPOCH: 11, loss: 0.6715376661638174, train_acc_e: 0.6942446043165468, train_acc_i: 0.654320987654321 time: 0.09408228794733683
+valid_acc_e: 0.6964285714285714, valid_acc_i: 0.68, test_acc_e: 0.48, test_acc_i: 0.2413793103448276
+jumping...
+
+RECUR EPOCH: 12, loss: 0.6259040008356542, train_acc_e: 0.710431654676259, train_acc_i: 0.6378600823045267 time: 0.09618140856424967
+valid_acc_e: 0.6785714285714286, valid_acc_i: 0.64, test_acc_e: 0.4666666666666667, test_acc_i: 0.3103448275862069
+jumping...
+
+RECUR EPOCH: 13, loss: 0.6323614552187822, train_acc_e: 0.7140287769784173, train_acc_i: 0.654320987654321 time: 0.09348649183909098
+valid_acc_e: 0.6964285714285714, valid_acc_i: 0.68, test_acc_e: 0.5333333333333333, test_acc_i: 0.27586206896551724
+jumping...
+
+RECUR EPOCH: 14, loss: 0.6169184696527175, train_acc_e: 0.7302158273381295, train_acc_i: 0.6378600823045267 time: 0.09691879351933798
+valid_acc_e: 0.6964285714285714, valid_acc_i: 0.68, test_acc_e: 0.6266666666666667, test_acc_i: 0.4482758620689655
+jumping...
+
+RECUR EPOCH: 15, loss: 0.5792982862810049, train_acc_e: 0.7050359712230215, train_acc_i: 0.6460905349794238 time: 0.09498010873794556
+valid_acc_e: 0.6964285714285714, valid_acc_i: 0.6, test_acc_e: 0.5333333333333333, test_acc_i: 0.27586206896551724
+jumping...
+
+RECUR EPOCH: 16, loss: 0.6057494206683626, train_acc_e: 0.7140287769784173, train_acc_i: 0.6584362139917695 time: 0.093644118309021
+valid_acc_e: 0.5535714285714286, valid_acc_i: 0.4, test_acc_e: 0.5066666666666667, test_acc_i: 0.27586206896551724
+jumping...
+
+RECUR EPOCH: 17, loss: 0.5289612836798523, train_acc_e: 0.7589928057553957, train_acc_i: 0.6625514403292181 time: 0.09545961221059164
+valid_acc_e: 0.6785714285714286, valid_acc_i: 0.64, test_acc_e: 0.5733333333333334, test_acc_i: 0.4482758620689655
+jumping...
+
+RECUR EPOCH: 18, loss: 0.5154155585991502, train_acc_e: 0.7589928057553957, train_acc_i: 0.6790123456790124 time: 0.09287167390187581
+valid_acc_e: 0.625, valid_acc_i: 0.52, test_acc_e: 0.5333333333333333, test_acc_i: 0.27586206896551724
+jumping...
+
+RECUR EPOCH: 19, loss: 0.5485985622484497, train_acc_e: 0.7446043165467626, train_acc_i: 0.6502057613168725 time: 0.09662172396977743
+valid_acc_e: 0.6071428571428571, valid_acc_i: 0.52, test_acc_e: 0.5866666666666667, test_acc_i: 0.3448275862068966
+jumping...
+
+RECUR EPOCH: 20, loss: 0.46297485249523274, train_acc_e: 0.7931654676258992, train_acc_i: 0.7242798353909465 time: 0.0916707158088684
+valid_acc_e: 0.6428571428571429, valid_acc_i: 0.56, test_acc_e: 0.6666666666666666, test_acc_i: 0.4482758620689655
+jumping...
+
+RECUR EPOCH: 21, loss: 0.4903093247747225, train_acc_e: 0.7805755395683454, train_acc_i: 0.7078189300411523 time: 0.09656307299931845
+valid_acc_e: 0.6964285714285714, valid_acc_i: 0.6, test_acc_e: 0.6266666666666667, test_acc_i: 0.4482758620689655
+jumping...
+
+RECUR EPOCH: 22, loss: 0.39395640612629707, train_acc_e: 0.8201438848920863, train_acc_i: 0.7366255144032922 time: 0.09862770636876424
+valid_acc_e: 0.7142857142857143, valid_acc_i: 0.68, test_acc_e: 0.6, test_acc_i: 0.4827586206896552
+jumping...
+
+RECUR EPOCH: 23, loss: 0.36069519137158806, train_acc_e: 0.841726618705036, train_acc_i: 0.7695473251028807 time: 0.09261656999588012
+valid_acc_e: 0.6964285714285714, valid_acc_i: 0.64, test_acc_e: 0.6266666666666667, test_acc_i: 0.41379310344827586
+jumping...
+
+RECUR EPOCH: 24, loss: 0.3598016642739253, train_acc_e: 0.829136690647482, train_acc_i: 0.7489711934156379 time: 0.09933442274729411
+valid_acc_e: 0.7321428571428571, valid_acc_i: 0.68, test_acc_e: 0.64, test_acc_i: 0.5517241379310345
+jumping...
+
+RECUR EPOCH: 25, loss: 0.4195781421268918, train_acc_e: 0.8075539568345323, train_acc_i: 0.7448559670781894 time: 0.09181210199991861
+valid_acc_e: 0.48214285714285715, valid_acc_i: 0.36, test_acc_e: 0.5733333333333334, test_acc_i: 0.3448275862068966
+jumping...
+
+RECUR EPOCH: 26, loss: 0.42452051021434645, train_acc_e: 0.8093525179856115, train_acc_i: 0.7489711934156379 time: 0.09510379234949748
