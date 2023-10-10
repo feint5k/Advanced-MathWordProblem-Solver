@@ -1,0 +1,38 @@
+
+/users/PAS1440/deyosu78/T-RNN/second_stage
+o0002.ten.osc.edu
+Thu Nov 28 22:31:32 EST 2019
+41
+23094
+loading finished
+RECUR EPOCH: 0, loss: 0.9598976973250516, train_acc_e: 0.5665984687097931, train_acc_i: 0.37986443570175854 time: 4.415646207332611
+valid_acc_e: 0.6950998185117967, valid_acc_i: 0.5501002004008017, test_acc_e: 0.6624888093106536, test_acc_i: 0.48848848848848847
+originial 0
+saving... 0.5501002004008017
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.402, ans_acc:0.407
+
+RECUR EPOCH: 1, loss: 0.6414369841562649, train_acc_e: 0.7248950665457383, train_acc_i: 0.5719770583495284 time: 4.55181317726771
+valid_acc_e: 0.764519056261343, valid_acc_i: 0.6402805611222445, test_acc_e: 0.7354521038495971, test_acc_i: 0.5815815815815816
+originial 0.5501002004008017
+saving... 0.6402805611222445
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.497, ans_acc:0.504
+
+RECUR EPOCH: 2, loss: 0.5149708783428223, train_acc_e: 0.780536162493936, train_acc_i: 0.6479594255107362 time: 4.572122848033905
+valid_acc_e: 0.7958257713248639, valid_acc_i: 0.6793587174348698, test_acc_e: 0.7802148612354521, test_acc_i: 0.6416416416416416
+originial 0.6402805611222445
