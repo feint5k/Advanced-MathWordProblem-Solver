@@ -159,3 +159,173 @@ class Attention_1(nn.Module):
 		'''
 		attn = torch.bmm(output, context.transpose(1,2))
 		if self.mask is not None:
+			attn.data.masked_fill_(self.mask, -float('inf'))
+		attn = F.softmax(attn.view(-1, input_size), dim=1).view(batch_size, -1, input_size)
+		 
+		# (b, o, i) * (b, i, dim) -> (b, o, dim)
+		mix = torch.bmm(attn, context)
+		 
+		combined = torch.cat((mix, output), dim=2)
+		 
+		#output = F.tanh(self.linear_out(combined.view(-1, 2*hidden_size)))\
+					.view(batch_size, -1, hidden_size)
+		 
+		# output: (b, o, dim)
+		# attn	: (b, o, i)
+		#return output, attn
+		'''
+		return output_list, attn_list
+
+class RecursiveNN(nn.Module):
+	def __init__(self, vocabSize, embedSize=100, numClasses=5):
+		super(RecursiveNN, self).__init__()
+		#self.embedding = nn.Embedding(int(vocabSize), embedSize)
+		#self.self-att -> embedding 
+		#self.att 
+		#self.self_att_model = self_att_model
+		self.W = nn.Linear(2*embedSize, embedSize, bias=True)
+		self.projection = nn.Linear(embedSize, numClasses, bias=True)
+		self.activation = F.relu
+		self.nodeProbList = []
+		self.labelList = []
+		self.classes = ['+','-','*','/','^']
+	
+	def leaf_emb(self, node, num_embed, look_up):
+		if node.is_leaf:
+			#try:
+			node.node_emb = num_embed[look_up.index(node.root_value)]
+		#	except:
+		#		print(node) 
+		else:
+			self.leaf_emb(node.left_tree, num_embed, look_up)
+			self.leaf_emb(node.right_tree, num_embed, look_up)
+	
+	def traverse(self, node):
+		if node.is_leaf:
+			currentNode = node.node_emb.unsqueeze(0)
+		else:
+			#currentNode = self.activation(self.W(torch.cat((self.traverse(node.left_tree),self.traverse(node.right_tree)),1)))
+			left_vector = self.traverse(node.left_tree)#.unsqueeze(0)
+			right_vector = self.traverse(node.right_tree)#.unsqueeze(0)
+			#print (left_vector)
+			combined_v = torch.cat((left_vector, right_vector),1)
+			currentNode = self.activation(self.W(combined_v))
+			node.node_emb = currentNode.squeeze(0)
+			assert node.is_leaf==False, "error is leaf"
+			#self.nodeProbList.append(self.projection(currentNode))
+			proj_probs = self.projection(currentNode)
+			self.nodeProbList.append(proj_probs)
+			#node.numclass_probs = proj_probs 
+			self.labelList.append(self.classes.index(node.root_value))
+		return currentNode
+	
+	def forward(self, tree_node, num_embed, look_up):
+	
+		self.nodeProbList = []
+		self.labelList = []
+		self.leaf_emb(tree_node, num_embed, look_up)
+		self.traverse(tree_node)
+		self.labelList = torch.LongTensor(self.labelList)
+		
+		#self.labelList = self.labelList.cuda()
+		#batch_loss_l = torch.FloatTensor([0])[0].cuda()
+		batch_loss_l = torch.FloatTensor([0])[0].to(device)
+		self.labelList = self.labelList.to(device)
+		#print (torch.cat(self.nodeProbList).size())
+		#print (self.labelList)
+		return torch.cat(self.nodeProbList)#, tree_node
+	
+	def getLoss_train(self, tree_node, num_embed, look_up):
+		nodes = self.forward(tree_node, num_embed, look_up)
+		predictions = nodes.max(dim=1)[1]
+		loss = F.cross_entropy(input=nodes, target=self.labelList)
+
+		#exit(0)
+		#print (predictions.size())
+		#print ()
+		acc_elemwise, acc_t = self.compute_acc_elemwise(predictions, self.labelList)
+		acc_integrate = self.compute_acc_integrate(predictions, self.labelList)
+		return predictions, loss, acc_elemwise, acc_t, acc_integrate#, tree_node
+
+	def test_forward(self, tree_node, num_embed, look_up):
+		nodes = self.forward(tree_node, num_embed, look_up)
+		predictions = nodes.max(dim=1)[1]
+		acc_elemwise, acc_t = self.compute_acc_elemwise(predictions, self.labelList)
+		acc_integrate = self.compute_acc_integrate(predictions, self.labelList)
+		return predictions, acc_elemwise, acc_t, acc_integrate#, tree_node
+
+	def predict_traverse(self, node):
+		if node.is_leaf:
+			currentNode = node.node_emb.unsqueeze(0)
+		else:
+			#currentNode = self.activation(self.W(torch.cat((self.traverse(node.left_tree),self.traverse(node.right_tree)),1)))
+			left_vector = self.predict_traverse(node.left_tree)#.unsqueeze(0)
+			right_vector = self.predict_traverse(node.right_tree)#.unsqueeze(0)
+			#print (left_vector)
+			combined_v = torch.cat((left_vector, right_vector),1)
+			currentNode = self.activation(self.W(combined_v))
+			node.node_emb = currentNode.squeeze(0)
+			assert node.is_leaf==False, "error is leaf"
+			#self.nodeProbList.append(self.projection(currentNode))
+			proj_probs = self.projection(currentNode)
+			node_id = proj_probs.max(dim=1)[1]
+			node_marker = self.classes[node_id]
+			node.root_value = node_marker
+			#print ('_++_', node_marker)
+			#print ("_++_", proj_probs.size())
+			#self.nodeProbList.append(proj_probs)
+			#node.numclass_probs = proj_probs 
+			#self.labelList.append(self.classes.index(node.root_value))
+		return currentNode
+	
+	def predict(self, tree_node, num_embed, look_up):#, num_list, gold_ans):
+		self.leaf_emb(tree_node, num_embed, look_up)
+		self.predict_traverse(tree_node)
+		post_equ = post_order(tree_node)
+		#print ('tst:', post_equ)
+		#pred_ans = post_solver(post_equ)
+		
+		return tree_node, post_equ#, pred_ans
+
+	def compute_acc_elemwise(self, pred_tensor, label_tensor):
+		return torch.sum((pred_tensor == label_tensor).int()).item() , len(pred_tensor)
+	
+	def compute_acc_integrate(self, pred_tensor, label_tensor):
+		return 1 if torch.equal(pred_tensor, label_tensor) else 0
+	
+	def evaluate(self, trees):
+		n = nAll = correctRoot = correctAll = 0.0
+		return correctRoot / n, correctAll/nAll
+	
+	def forward_one_layer(self, left_node, right_node):
+		left_vector = left_node.node_emb.unsqueeze(0)
+		right_vector = right_node.node_emb.unsqueeze(0)
+		combined_v = torch.cat((left_vector, right_vector),1)
+		currentNode = self.activation(self.W(combined_v))
+		root_node = BinaryTree()
+		root_node.is_leaf = False
+		root_node.node_emb = currentNode.squeeze(0)
+		proj_probs = self.projection(currentNode)
+		#print ('recur:', proj_probs)
+		#print ('r_m',proj_probs.max(1)[1][0].item())
+		pred_idx = proj_probs.max(1)[1][0].item()
+		root_node.root_value = self.classes[pred_idx]
+		root_node.left_tree = left_node
+		root_node.right_tree = right_node
+		return root_node, proj_probs
+
+class Self_ATT_RTree(nn.Module):
+	def __init__(self, data_loader, encode_params, RecursiveNN):
+		super(Self_ATT_RTree, self).__init__()
+		self.data_loader = data_loader
+		self.encode_params = encode_params
+		self.embed_model =	nn.Embedding(data_loader.vocab_len, encode_params['emb_size'])
+		#self.embed_model = self.embed_model.cuda()
+		self.embed_model = self.embed_model.to(device)
+		self.encoder = EncoderRNN(vocab_size = data_loader.vocab_len,
+					  embed_model = self.embed_model,
+					  emb_size = encode_params['emb_size'],
+					  hidden_size = encode_params['hidden_size'],
+					  input_dropout_p = encode_params['input_dropout_p'],
+					  dropout_p = encode_params['dropout_p'],
+					  n_layers = encode_params['n_layers'],
