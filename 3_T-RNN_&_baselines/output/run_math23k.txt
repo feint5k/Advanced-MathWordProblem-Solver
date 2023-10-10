@@ -36,3 +36,163 @@ final test temp_acc:0.497, ans_acc:0.504
 RECUR EPOCH: 2, loss: 0.5149708783428223, train_acc_e: 0.780536162493936, train_acc_i: 0.6479594255107362 time: 4.572122848033905
 valid_acc_e: 0.7958257713248639, valid_acc_i: 0.6793587174348698, test_acc_e: 0.7802148612354521, test_acc_i: 0.6416416416416416
 originial 0.6402805611222445
+saving... 0.6793587174348698
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.524, ans_acc:0.533
+
+RECUR EPOCH: 3, loss: 0.4361421059120118, train_acc_e: 0.8133344582480859, train_acc_i: 0.6953595297909655 time: 4.695457720756531
+valid_acc_e: 0.8171506352087115, valid_acc_i: 0.7144288577154309, test_acc_e: 0.8043867502238138, test_acc_i: 0.6716716716716716
+originial 0.6793587174348698
+saving... 0.7144288577154309
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.557, ans_acc:0.569
+
+RECUR EPOCH: 4, loss: 0.3798503679093882, train_acc_e: 0.838434118664445, train_acc_i: 0.7343224155093141 time: 4.686807099978129
+valid_acc_e: 0.838021778584392, valid_acc_i: 0.7324649298597194, test_acc_e: 0.82408236347359, test_acc_i: 0.7007007007007007
+originial 0.7144288577154309
+saving... 0.7324649298597194
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.556, ans_acc:0.568
+
+RECUR EPOCH: 5, loss: 0.3377480805358113, train_acc_e: 0.8561726181687794, train_acc_i: 0.7610560743233635 time: 4.840516785780589
+valid_acc_e: 0.8548094373865699, valid_acc_i: 0.7665330661322646, test_acc_e: 0.8245299910474485, test_acc_i: 0.7147147147147147
+originial 0.7324649298597194
+saving... 0.7665330661322646
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.581, ans_acc:0.594
+
+RECUR EPOCH: 6, loss: 0.2989977272973895, train_acc_e: 0.8713589673282571, train_acc_i: 0.7859885291747641 time: 4.862342512607574
+valid_acc_e: 0.8443738656987296, valid_acc_i: 0.7474949899799599, test_acc_e: 0.8513876454789615, test_acc_i: 0.7547547547547547
+jumping...
+
+RECUR EPOCH: 7, loss: 0.27238646024193486, train_acc_e: 0.8835713231106705, train_acc_i: 0.8028155661942457 time: 4.735196053981781
+valid_acc_e: 0.8752268602540835, valid_acc_i: 0.7945891783567134, test_acc_e: 0.859892569382274, test_acc_i: 0.7647647647647647
+originial 0.7665330661322646
+saving... 0.7945891783567134
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.606, ans_acc:0.621
+
+RECUR EPOCH: 8, loss: 0.25274942958050384, train_acc_e: 0.8915652485710067, train_acc_i: 0.8154239939327866 time: 4.733946100870768
+valid_acc_e: 0.8706896551724138, valid_acc_i: 0.7915831663326653, test_acc_e: 0.8639212175470009, test_acc_i: 0.7697697697697697
+jumping...
+
+RECUR EPOCH: 9, loss: 0.23199898326965385, train_acc_e: 0.899727911244226, train_acc_i: 0.8281272218798882 time: 4.733386703332266
+valid_acc_e: 0.8679673321234119, valid_acc_i: 0.782565130260521, test_acc_e: 0.8581020590868398, test_acc_i: 0.7597597597597597
+jumping...
+
+RECUR EPOCH: 10, loss: 0.21345222581985093, train_acc_e: 0.907764021007783, train_acc_i: 0.8401668483670665 time: 4.772222189108531
+valid_acc_e: 0.8852087114337568, valid_acc_i: 0.812625250501002, test_acc_e: 0.8657117278424351, test_acc_i: 0.7747747747747747
+originial 0.7945891783567134
+saving... 0.812625250501002
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.629, ans_acc:0.646
+
+RECUR EPOCH: 11, loss: 0.19385674710679904, train_acc_e: 0.9153782877391323, train_acc_i: 0.8526330757927667 time: 4.7862975398699446
+valid_acc_e: 0.8720508166969148, valid_acc_i: 0.7875751503006012, test_acc_e: 0.8630259623992838, test_acc_i: 0.7767767767767768
+jumping...
+
+RECUR EPOCH: 12, loss: 0.17960719047603818, train_acc_e: 0.9197865474257029, train_acc_i: 0.8591268900791582 time: 4.802683317661286
+valid_acc_e: 0.8802177858439202, valid_acc_i: 0.8006012024048096, test_acc_e: 0.8666069829901522, test_acc_i: 0.7747747747747747
+jumping...
+
+RECUR EPOCH: 13, loss: 0.17503876751476388, train_acc_e: 0.9238573326865074, train_acc_i: 0.8643883016542636 time: 4.855604068438212
+valid_acc_e: 0.882486388384755, valid_acc_i: 0.8076152304609219, test_acc_e: 0.8728737690241719, test_acc_i: 0.7917917917917918
+jumping...
+
+RECUR EPOCH: 14, loss: 0.16693986428235585, train_acc_e: 0.9282234080698573, train_acc_i: 0.8715931175048585 time: 4.841498812039693
+valid_acc_e: 0.8820326678765881, valid_acc_i: 0.8026052104208417, test_acc_e: 0.8630259623992838, test_acc_i: 0.7687687687687688
+jumping...
+
+RECUR EPOCH: 15, loss: 0.15435941675567974, train_acc_e: 0.931598152327519, train_acc_i: 0.8780395316869697 time: 4.862944372495016
+valid_acc_e: 0.8852087114337568, valid_acc_i: 0.8046092184368737, test_acc_e: 0.8782452999104745, test_acc_i: 0.7947947947947948
+jumping...
+
+RECUR EPOCH: 16, loss: 0.1457425896978019, train_acc_e: 0.9356900297399338, train_acc_i: 0.88429634545196 time: 4.976316865285238
+valid_acc_e: 0.8820326678765881, valid_acc_i: 0.811623246492986, test_acc_e: 0.8742166517457476, test_acc_i: 0.7837837837837838
+jumping...
+
+RECUR EPOCH: 17, loss: 0.13853737067180646, train_acc_e: 0.9384952859041151, train_acc_i: 0.8896051571313457 time: 4.948014156023661
+valid_acc_e: 0.8933756805807622, valid_acc_i: 0.8306613226452906, test_acc_e: 0.8791405550581916, test_acc_i: 0.7937937937937938
+originial 0.812625250501002
+saving... 0.8306613226452906
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.622, ans_acc:0.639
+
+RECUR EPOCH: 18, loss: 0.1277946700087858, train_acc_e: 0.9429457298939065, train_acc_i: 0.8966203725648196 time: 5.037818920612335
+valid_acc_e: 0.895644283121597, valid_acc_i: 0.8246492985971944, test_acc_e: 0.8666069829901522, test_acc_i: 0.7757757757757757
+jumping...
+
+RECUR EPOCH: 19, loss: 0.12305970938192955, train_acc_e: 0.9465313956676721, train_acc_i: 0.9017869839313647 time: 4.921447825431824
+valid_acc_e: 0.8802177858439202, valid_acc_i: 0.8026052104208417, test_acc_e: 0.8769024171888988, test_acc_i: 0.7887887887887888
+jumping...
+
+RECUR EPOCH: 20, loss: 0.12145759989858668, train_acc_e: 0.946636856425724, train_acc_i: 0.9019765843484856 time: 4.938371658325195
+valid_acc_e: 0.8852087114337568, valid_acc_i: 0.8196392785571143, test_acc_e: 0.8795881826320502, test_acc_i: 0.7987987987987988
+jumping...
+
+RECUR EPOCH: 21, loss: 0.11505386176055223, train_acc_e: 0.9499483242285546, train_acc_i: 0.9070957956107504 time: 4.797950891653697
+valid_acc_e: 0.8888384754990926, valid_acc_i: 0.8256513026052105, test_acc_e: 0.8894359892569382, test_acc_i: 0.8038038038038038
+jumping...
+
+RECUR EPOCH: 22, loss: 0.10873444947658353, train_acc_e: 0.9527746725443462, train_acc_i: 0.9127838081243779 time: 5.008314641316732
+valid_acc_e: 0.9038112522686026, valid_acc_i: 0.8396793587174348, test_acc_e: 0.8795881826320502, test_acc_i: 0.8028028028028028
+originial 0.8306613226452906
+saving... 0.8396793587174348
+saveing ok!
+error num len ['temp_5', 'temp_0', 'temp_1', '^', '^'] ['10', '5', '27', '351']
+error num len ['temp_1', 'temp_2', '^', 'temp_3', '^', 'temp_4', 'temp_5', '^', '^', 'temp_6', 'temp_5', '^'] ['2', '40', '21', '82', '19', '87']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', '^', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', 'temp_7', '^', 'temp_8', '^', 'temp_9', '^', 'temp_10', '^', 'temp_11'] ['101', '103', '107', '109', '113', '127', '131', '137', '139', '149', '1030']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', 'temp_3', '^', '^', 'temp_4', 'temp_5', '^', '^', 'temp_1', 'temp_2', '^', '^'] ['100', '99', '0', '4', '25']
+error num len ['temp_3', 'temp_4', '^', 'temp_4', '^', '1', 'temp_6', '^', '^'] ['2001', '7', '13', '2008', '105', '56']
+error num len ['temp_3', 'temp_3', 'temp_5', '^', 'temp_4', '^', '^'] ['2012', '3', '1', '20000', '0.035']
+error num len ['temp_0', 'temp_1', '^', 'temp_2', '^', 'temp_3', 'temp_4', '^', 'temp_5', '^', 'temp_6', '^', '^', 'temp_7', '^'] ['2', '4', '8', '16', '25', '6.25', '1.25']
+final test temp_acc:0.624, ans_acc:0.641
