@@ -96,3 +96,24 @@ def main():
     }
 
     #dataset = read_data_json("/home/wanglei/aaai_2019/pointer_math_dqn/dataset/source_2/math23k_final.json")
+    #emb_vectors = np.load('/home/wanglei/aaai_2019/parsing_for_mwp/data/source_2/emb_100.npy')
+    #data_loader = DataLoader(dataset) 
+    #print ('loading finished')
+
+
+    recu_nn = RecursiveNN(data_loader.vocab_len, encode_params['emb_size'], params["rnn_classes"])
+    #recu_nn = recu_nn.cuda()
+    recu_nn = recu_nn.to(device)
+    self_att_recu_tree = Self_ATT_RTree(data_loader, encode_params, recu_nn)
+    #self_att_recu_tree = self_att_recu_tree.cuda()
+    self_att_recu_tree = self_att_recu_tree.to(device)
+    #for name, params in self_att_recu_tree.named_children():
+    #    print (name, params)
+    optimizer = torch.optim.SGD(filter(lambda p: p.requires_grad, self_att_recu_tree.parameters()), \
+                                lr=0.01, momentum=0.9, dampening=0.0)
+
+    trainer = Trainer(data_loader, params)
+    trainer.train(self_att_recu_tree, optimizer)
+
+
+main()
