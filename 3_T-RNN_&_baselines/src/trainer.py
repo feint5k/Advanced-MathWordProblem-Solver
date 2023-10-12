@@ -243,3 +243,66 @@ class Trainer():
 				epoch_loss += b_loss
 				epoch_pred+= b_pred
 				epoch_count += b_count
+				epoch_acc_e += b_acc_e
+				epoch_acc_e_t += b_acc_e_t
+				epoch_acc_i += b_acc_i
+				xx += 1
+				#print (xx)
+				#print (b_pred)
+				#break
+			
+			
+			e_time = time.time()
+			
+			#print ("ee": epoch_acc_e)
+			#print ("et": epoch_acc_e_t)
+			#print ("recur epoch: {}, loss: {}, acc_e: {}, acc_i: {} time: {}".\
+			#		format(epoch, epoch_loss/epoch_count, sum(epoch_acc_e)*1.0/sum(epoch_acc_e_t), sum(epoch_acc_i)/epoch_count, \
+			#		   (e_time-s_time)/60))
+
+			valid_pred, valid_count, valid_acc_e, valid_acc_e_t, valid_acc_i = self._test_recur(model, valid_list)
+			test_pred, test_count, test_acc_e, test_acc_e_t, test_acc_i = self._test_recur(model, test_list)
+
+			#print ('**********1', test_pred) 
+			#print ('**********2', test_count)
+			#print ('**********3', test_acc_e)
+			#print ('**********4', test_acc_e_t)
+			#print ('**********5', test_acc_i)
+			
+			print ("RECUR EPOCH: {}, loss: {}, train_acc_e: {}, train_acc_i: {} time: {}".\
+			   format(epoch, epoch_loss/epoch_count, sum(epoch_acc_e)*1.0/sum(epoch_acc_e_t), sum(epoch_acc_i)/epoch_count, \
+				  (e_time-s_time)/60))
+			
+			print ("valid_acc_e: {}, valid_acc_i: {}, test_acc_e: {}, test_acc_i: {}".format(sum(valid_acc_e)*1.0/sum(valid_acc_e_t), sum(valid_acc_i)*1.0/valid_count, sum(test_acc_e)*1.0/sum(test_acc_e_t), sum(test_acc_i)*1.0/test_count))
+
+			
+			test_acc = sum(valid_acc_i)*1.0/valid_count
+			if test_acc >= valid_max_acc:
+				print ("originial", valid_max_acc)
+				valid_max_acc = test_acc
+				print ("saving...", valid_max_acc)
+				if os.path.exists(self.params['save_file']):
+					os.remove(self.params['save_file'])
+				torch.save(model, self.params['save_file'])
+				print ("saveing ok!")
+				self.predict_joint(model)
+			
+				# save recursive data: format: {'id': , 'right_flag':, 'predict_result', 'ground_result'} 
+				# save joint data ['id':, 'right_flag':, predict_result, ground_result]
+			
+			else:
+				print ("jumping...")
+	
+			print ()
+		
+		
+	def train(self, model, optimizer):
+		self.optimizer = optimizer
+		#self._train_recur_epoch(model, 0, 0)
+		#self._train_pointer_epoch(model, 0, 0)
+		#self._train_joint_epoch(model,0, 0)
+		#self._train_recur_epoch(model, 1, 1)
+		#self._train_pointer_epoch(model, 1, 1)
+		#self._train_joint_epoch(model,1, 1)
+		#self._train_joint_epoch(model,0, 10)
+		self._train_recur_epoch(model, 0, 100)
