@@ -329,3 +329,179 @@ class Self_ATT_RTree(nn.Module):
 					  input_dropout_p = encode_params['input_dropout_p'],
 					  dropout_p = encode_params['dropout_p'],
 					  n_layers = encode_params['n_layers'],
+					  bidirectional = encode_params['bidirectional'],
+					  rnn_cell = encode_params['rnn_cell'],
+					  rnn_cell_name = encode_params['rnn_cell_name'],
+					  variable_lengths_flag = encode_params['variable_lengths_flag'])
+		if encode_params['bidirectional'] == True:
+			self.self_attention = Attention_1(encode_params['hidden_size']*4, encode_params['emb_size'])
+		else:
+			self.self_attention = Attention_1(encode_params['hidden_size']*2, encode_params['emb_size'])
+		
+		if encode_params['bidirectional'] == True:
+			decoder_hidden_size = encode_params['hidden_size']*2
+		
+		self.recur_nn = RecursiveNN
+		
+		self._prepare_for_recur()
+		self._prepare_for_pointer()
+	
+	def _prepare_for_recur(self):
+		self.fixed_num_symbol = ['1', 'PI']
+		self.fixed_num_idx = [self.data_loader.vocab_dict[elem] for elem in self.fixed_num_symbol]
+		self.fixed_num = torch.LongTensor(self.fixed_num_idx)
+
+		#self.fixed_num = self.fixed_num.cuda()
+		self.fixed_num = self.fixed_num.to(device)
+		
+		self.fixed_num_emb = self.embed_model(self.fixed_num)
+
+	def _prepare_for_pointer(self):
+		self.fixed_p_num_symbol = ['EOS','1', 'PI']
+		self.fixed_p_num_idx = [self.data_loader.vocab_dict[elem] for elem in self.fixed_p_num_symbol]
+		self.fixed_p_num = torch.LongTensor(self.fixed_p_num_idx)
+
+		#self.fixed_p_num = self.fixed_p_num.cuda()
+		self.fixed_p_num = self.fixed_p_num.to(device)
+		
+		self.fixed_p_num_emb = self.embed_model(self.fixed_p_num)
+
+	def forward(self, input_tensor, input_lengths, num_pos, b_gd_tree):
+		encoder_outputs, encoder_hidden = self.encoder(input_tensor, input_lengths)
+		en_output_list, en_attn_list = self.self_attention(encoder_outputs, encoder_outputs, num_pos, input_lengths)
+		
+		batch_size = len(en_output_list)
+		
+		batch_predictions = []
+		batch_acc_e_list = []
+		batch_acc_e_t_list = []
+		batch_acc_i_list = []
+		#batch_loss_l = torch.FloatTensor([0])[0].cuda()
+		batch_loss_l = torch.FloatTensor([0])[0].to(device)
+		batch_count = 0
+		for b_i in range(batch_size):
+			#en_output = en_output_list[b_i]
+			en_output = torch.cat([self.fixed_num_emb, en_output_list[b_i]], dim=0)
+			#print (num_pos)
+			look_up = self.fixed_num_symbol + ['temp_'+str(temp_i) for temp_i in range(len(num_pos[b_i]))]
+			#print (mid_order(b_gd_tree))
+			if len(b_gd_tree[b_i]) == 0:
+				continue
+			gd_tree_node = b_gd_tree[b_i][-1]
+			
+			#print (en_output)
+			#print (look_up.index('temp_0'))
+			#print (en_output[look_up.index("temp_0")])
+			#print ()
+			
+			#print (mid_order(gd_tree_node))
+			#self.recur_nn(gd_tree_node, en_output, look_up)
+			p, l, acc_e, acc_e_t, acc_i = self.recur_nn.getLoss_train(gd_tree_node, en_output, look_up)
+			#print (p)tensor([ 0,  2])
+			#print (l)tensor(1.5615)
+			#print (l)
+			#print (post_order(gd_tree_node))
+			#get_info_teacher_pointer(gd_tree_node)
+			
+			batch_predictions.append(p)
+			batch_acc_e_list.append(acc_e)
+			batch_acc_e_t_list.append(acc_e_t)
+			batch_acc_i_list.append(acc_i)
+			#batch_loss_l.append(l)
+			#batch_loss_l += l
+			batch_loss_l = torch.sum(torch.cat([ batch_loss_l.unsqueeze(0), l.unsqueeze(0)], 0))
+			batch_count += 1
+			
+			#print (post_order(gd_tree_final))
+			#print ("hhhhhh:", en_output)
+		#print (batch_loss_l)
+		#torch.cat(batch_loss_l)
+		#print (torch.sum(torch.cat(batch_loss_l)))
+		#print ()
+		return batch_predictions, batch_loss_l, batch_count, batch_acc_e_list, batch_acc_e_t_list, batch_acc_i_list
+
+	def test_forward_recur(self, input_tensor, input_lengths, num_pos, b_gd_tree):
+		encoder_outputs, encoder_hidden = self.encoder(input_tensor, input_lengths)
+		en_output_list, en_attn_list = self.self_attention(encoder_outputs, encoder_outputs, num_pos, input_lengths)
+		
+		batch_size = len(en_output_list)
+		
+		batch_predictions = []
+		batch_acc_e_list = []
+		batch_acc_e_t_list = []
+		batch_acc_i_list = []
+		batch_count = 0
+		for b_i in range(batch_size):
+			#en_output = en_output_list[b_i]
+			en_output = torch.cat([self.fixed_num_emb, en_output_list[b_i]], dim=0)
+			#print (num_pos)
+			look_up = self.fixed_num_symbol + ['temp_'+str(temp_i) for temp_i in range(len(num_pos[b_i]))]
+			#print (b_gd_tree[b_i])
+			if len(b_gd_tree[b_i]) == 0:
+				continue
+			gd_tree_node = b_gd_tree[b_i][-1]
+			
+			#print (en_output)
+			#print (look_up.index('temp_0'))
+			#print (en_output[look_up.index("temp_0")])
+			#print ()
+			
+			#self.recur_nn(gd_tree_node, en_output, look_up)
+			p, acc_e, acc_e_t, acc_i = self.recur_nn.test_forward(gd_tree_node, en_output, look_up)
+			#print (p)tensor([ 0,  2])
+			#print (l)tensor(1.5615)
+			#print (l)
+			#print (post_order(gd_tree_node))
+			#get_info_teacher_pointer(gd_tree_node)
+			
+			batch_predictions.append(p)
+			batch_acc_e_list.append(acc_e)
+			batch_acc_e_t_list.append(acc_e_t)
+			batch_acc_i_list.append(acc_i)
+			#batch_loss_l.append(l)
+			#batch_loss_l += l
+			batch_count += 1
+			
+			#print (post_order(gd_tree_final))
+			#print ("hhhhhh:", en_output)
+		#print (batch_loss_l)
+		#torch.cat(batch_loss_l)
+		#print (torch.sum(torch.cat(batch_loss_l)))
+		#print ()
+		return batch_predictions, batch_count, batch_acc_e_list, batch_acc_e_t_list, batch_acc_i_list
+
+	def predict_forward_recur(self, input_tensor, input_lengths, num_pos, batch_seq_tree, batch_flags):
+		encoder_outputs, encoder_hidden = self.encoder(input_tensor, input_lengths)
+		en_output_list, en_attn_list = self.self_attention(encoder_outputs, encoder_outputs, num_pos, input_lengths)
+		#print ('-x-x-x-',en_attn_list[0])
+		batch_size = len(en_output_list)
+		batch_pred_tree_node = []
+		batch_pred_post_equ = []
+		#batch_pred_ans = []
+				
+
+		for b_i in range(batch_size):
+			
+			flag = batch_flags[b_i]
+			#num_list = batch_num_list[b_i]
+			if flag == 1:
+			
+			
+				en_output = torch.cat([self.fixed_num_emb, en_output_list[b_i]], dim=0)
+
+				look_up = self.fixed_num_symbol + ['temp_'+str(temp_i) for temp_i in range(len(num_pos[b_i]))]
+
+				seq_node = batch_seq_tree[b_i]
+				#num_list = batch_num_list[i]
+				#gold_ans = batch_solution[i]
+				tree_node, post_equ = self.recur_nn.predict(seq_node, en_output, look_up)#, num_list, gold_ans)
+				#p, acc_e, acc_e_t, acc_i = self.recur_nn.test_forward(gd_tree_node, en_output, look_up)
+
+				batch_pred_tree_node.append(tree_node)
+				batch_pred_post_equ.append(post_equ)
+		
+			else:
+				batch_pred_tree_node.append(None)
+				batch_pred_post_equ.append([])
+			   
+		return batch_pred_tree_node, batch_pred_post_equ#,en_attn_list
