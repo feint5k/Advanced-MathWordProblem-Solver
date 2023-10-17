@@ -5,4 +5,8 @@ This software uses Natural Language Processing to solve Math word problems. Our 
 ### Contributions
 - Creation of 'Dolphin300', a unique English corpus of arithmetic word problems.
 - Development of equation templates and normalizing equations on par with the Math23K dataset [1].
-- Evaluation of T-RNN and retrieval baselines on Math2
+- Evaluation of T-RNN and retrieval baselines on Math23K, Dolphin300 and Dolphin1500.
+
+### Data Processing Examples:
+Our software transforms sentences into concise math problems. For instance:
+- What is th
