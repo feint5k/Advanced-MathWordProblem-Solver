@@ -15,4 +15,7 @@ Our software transforms sentences into concise math problems. For instance:
 ### Folder Structure:
 - Web scraping: Contains code to scrap and clean math word problems from the Internet.
 - Data_Cleaning: Houses the code for data cleaning including the transformation logic.
-- T-RNN
+- T-RNN and baselines: Contains the code for T-RNN and baseline models.
+
+### Implementation:
+The project is implemented in a Python 3.6 or above environment using Pytorch. T-RNN code is
