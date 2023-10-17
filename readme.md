@@ -9,4 +9,8 @@ This software uses Natural Language Processing to solve Math word problems. Our 
 
 ### Data Processing Examples:
 Our software transforms sentences into concise math problems. For instance:
-- What is th
+- What is the value of five times the sum of twice of three-fourths and nine?
+- help!!!!!!!(please) i can't figure this out! what is the sum of 4 2/5 and 17 3/7 ?
+
+### Folder Structure:
+- Web 
