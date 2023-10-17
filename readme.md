@@ -18,4 +18,7 @@ Our software transforms sentences into concise math problems. For instance:
 - T-RNN and baselines: Contains the code for T-RNN and baseline models.
 
 ### Implementation:
-The project is implemented in a Python 3.6 or above environment using Pytorch. T-RNN code is
+The project is implemented in a Python 3.6 or above environment using Pytorch. T-RNN code is replicated and further implementations for Math23K are added. Data replication and raw Dolphin18k data processing have been tackled as well.
+
+## References:
+[1] Lei Wang, D
