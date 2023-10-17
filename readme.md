@@ -13,4 +13,6 @@ Our software transforms sentences into concise math problems. For instance:
 - help!!!!!!!(please) i can't figure this out! what is the sum of 4 2/5 and 17 3/7 ?
 
 ### Folder Structure:
-- Web 
+- Web scraping: Contains code to scrap and clean math word problems from the Internet.
+- Data_Cleaning: Houses the code for data cleaning including the transformation logic.
+- T-RNN
