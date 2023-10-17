@@ -22,4 +22,4 @@ The project is implemented in a Python 3.6 or above environment using Pytorch. T
 
 ## References:
 [1] Lei Wang, Dongxiang Zhang, Jipeng Zhang, Xing Xu, Lianli Gao, Bingtian Dai, and Heng Tao Shen. Template-based math word problem solvers with recursive neural networks. 2019.
-[2] Yan Wang, Xiaojiang Liu, an
+[2] Yan Wang, Xiaojiang Liu, and Shuming Shi. Deep neural solver for math word problems. In Proceedings of the 2017 Conference on Empirical Methods in Natural  Language Processing, pages 845–854, 2017.
