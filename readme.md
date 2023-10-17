@@ -21,4 +21,5 @@ Our software transforms sentences into concise math problems. For instance:
 The project is implemented in a Python 3.6 or above environment using Pytorch. T-RNN code is replicated and further implementations for Math23K are added. Data replication and raw Dolphin18k data processing have been tackled as well.
 
 ## References:
-[1] Lei Wang, D
+[1] Lei Wang, Dongxiang Zhang, Jipeng Zhang, Xing Xu, Lianli Gao, Bingtian Dai, and Heng Tao Shen. Template-based math word problem solvers with recursive neural networks. 2019.
+[2] Yan Wang, Xiaojiang Liu, an
